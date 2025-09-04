@@ -656,7 +656,7 @@ const EMBEDDING_MODEL = process.env.EMBEDDING_MODEL || 'sentence-transformers/al
 const CHUNK_SIZE = parseInt(process.env.CHUNK_SIZE) || 1000;
 const CHUNK_OVERLAP = parseInt(process.env.CHUNK_OVERLAP) || 200;
 const CHROMA_URL = process.env.CHROMA_URL || "http://localhost:8000";
-const GROQ_MODEL = process.env.GROQ_MODEL || "llama-3.1-8b-instant"; // Free model on Groq
+const GROQ_MODEL = process.env.GROQ_MODEL || "llama-3.3-70b-versatile"; // Free model on Groq
 const SUPPORTED_EXTENSIONS = new Set([
   '.js', '.jsx', '.ts', '.tsx', '.py', '.java', '.cpp', '.c', '.h', 
   '.go', '.rb', '.php', '.rs', '.swift', '.kt', '.scala', 
