@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+
+.epunda-slab-heading {
+  font-family: "Epunda Slab", serif;
+  font-optical-sizing: auto;
+  font-weight:300;
+  font-style: normal;
+}
+
+.outfit-main {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: bold;
+}
