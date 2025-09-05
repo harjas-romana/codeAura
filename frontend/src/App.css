@@ -14,3 +14,10 @@
   font-weight: 700;
   font-style: bold;
 }
+
+.raleway-main {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
