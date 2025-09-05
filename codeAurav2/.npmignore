@@ -1,0 +1,9 @@
+.gitignore
+.env
+node_modules/
+test/
+examples/
+*.log
+.DS_Store
+coverage/
+.nyc_output/

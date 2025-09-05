@@ -14,6 +14,12 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 config({ path: join(__dirname, '.env') });
 
+// Check for required environment variables
+if (!process.env.GROQ_API_KEY) {
+  console.warn(chalk.yellow('⚠️  GROQ_API_KEY not set. AI features will be disabled.'));
+  console.warn(chalk.yellow('   Get your free API key at: https://console.groq.com/'));
+}
+
 // Enhanced CLI with better UX
 const program = new Command();
 
