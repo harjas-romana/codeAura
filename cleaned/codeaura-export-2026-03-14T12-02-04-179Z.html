@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>CodeAura — HTML</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#000;color:#ccc;font-family:'SF Mono','Courier New',monospace;font-size:12px;padding:28px}
+header{border-bottom:1px solid #111;padding-bottom:16px;margin-bottom:24px}
+h1{font-size:16px;font-weight:700;color:#fff;letter-spacing:.05em}h1 span{color:#00ff88}
+p{color:#555;margin-top:4px;font-size:11px}
+.charts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+.chart-card{background:#0a0a0a;border:1px solid #111;padding:16px}
+.chart-card canvas{max-height:240px}
+.result{background:#0a0a0a;border:1px solid #111;border-left:2px solid #222;padding:16px 20px;margin-bottom:12px}
+.result:first-of-type{border-left-color:#00ff88}
+.file{font-weight:700;color:#fff;margin-bottom:4px}
+.meta{font-size:10px;color:#444;margin-bottom:10px}
+.score{display:inline-block;background:#00ff88;color:#000;padding:1px 7px;font-size:10px;font-weight:700;margin-left:6px}
+pre{background:#000;padding:12px;font-size:11px;overflow-x:auto;white-space:pre-wrap;color:#888;max-height:280px;overflow-y:auto;line-height:1.7;border:1px solid #111}
+.desc{color:#555;font-size:11px;margin-bottom:8px;font-style:italic}
+</style></head>
+<body>
+<header>
+  <h1>CODE<span>AURA</span> v3.1.0 — Results</h1>
+  <p>Query: HTML  ·  10 results  ·  3/14/2026, 5:32:04 PM</p>
+</header>
+<div class="charts">
+  <div class="chart-card"><canvas id="cs"></canvas></div>
+  <div class="chart-card"><canvas id="cl"></canvas></div>
+</div>
+
+<div class="result">
+  <div class="file">#1 src/terminal-search.js<span class="score">66.5%</span></div>
+  <div class="meta">Lines 313–340  ·  javascript</div>
+  <div class="desc">javascript · terminal-search.js</div>
+  <pre>or:#555;font-size:11px;margin-bottom:8px;font-style:italic}
+&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;header&gt;
+  &lt;h1&gt;CODE&lt;span&gt;AURA&lt;/span&gt; v3.1.0 — Results&lt;/h1&gt;
+  &lt;p&gt;Query: ${esc(query)}  ·  ${results.length} results  ·  ${new Date().toLocaleString()}&lt;/p&gt;
+&lt;/header&gt;
+&lt;div class="charts"&gt;
+  &lt;div class="chart-card"&gt;&lt;canvas id="cs"&gt;&lt;/canvas&gt;&lt;/div&gt;
+  &lt;div class="chart-card"&gt;&lt;canvas id="cl"&gt;&lt;/canvas&gt;&lt;/div&gt;
+&lt;/div&gt;
+${results.map((r, i) =&gt; `
+&lt;div class="result"&gt;
+  &lt;div class="file"&gt;#${i+1} ${esc(r.filePath)}&lt;span class="score"&gt;${r.similarity.toFixed(1)}%&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="meta"&gt;Lines ${r.startLine}–${r.endLine}  ·  ${r.language || ''}&lt;/div&gt;
+  ${r.description ? `&lt;div class="desc"&gt;${esc(r.description)}&lt;/div&gt;` : ''}
+  &lt;pre&gt;${esc(r.content.slice(0, 800))}&lt;/pre&gt;
+&lt;/div&gt;`).join('')}
+&lt;script&gt;
+Chart.defaults.color='#5</pre>
+</div>
+<div class="result">
+  <div class="file">#2 src/server.js<span class="score">54.7%</span></div>
+  <div class="meta">Lines 219–244  ·  javascript</div>
+  <div class="desc">javascript · server.js lines 229–236</div>
+  <pre>;
+        }
+      }
+    }
+  }
+  return { nodes, links };
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+//  DASHBOARD HTML
+// ═══════════════════════════════════════════════════════════════════════════════
+function buildDashboardHtml() {
+  return /* html */`&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;
+&lt;title&gt;CodeAura v3.1.0&lt;/title&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"&gt;&lt;/script&gt;
+&lt;style&gt;
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#000;--s1:#0a0a0a;--s2:#111;--b1:#1a1a1a;--b2:#222;--text:#e0e0e0;--muted:#555;--d</pre>
+</div>
+<div class="result">
+  <div class="file">#3 src/terminal-search.js<span class="score">63.1%</span></div>
+  <div class="meta">Lines 225–244  ·  javascript</div>
+  <div class="desc">javascript · terminal-search.js lines 243–244</div>
+  <pre>og(chalk.dim(`  Page ${page + 1}/${total}\n`));
+}
+
+function tryJson(v) {
+  if (Array.isArray(v)) return v;
+  try { return JSON.parse(v) || []; } catch (_) { return []; }
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+//  EXPORT
+// ═══════════════════════════════════════════════════════════════════════════════
+async function exportResults(results, query, format) {
+  const ts  = new Date().toISOString().replace(/[:.]/g, '-');
+  const esc = s =&gt; String(s).replace(/&amp;/g,'&amp;amp;').replace(/&lt;/g,'&amp;lt;').replace(/&gt;/g,'&amp;gt;');
+
+  if (format === 'json') {
+    const fp = `codeaura-export-${ts}.json`;
+    await writeFile(fp, JSON.stringify({ query, results, exportedAt: new Date().toISOString() }, null, 2));
+    console.log(chalk.dim(`  · JSON → ${fp}\n`)); return;
+</pre>
+</div>
+<div class="result">
+  <div class="file">#4 src/server.js<span class="score">52.2%</span></div>
+  <div class="meta">Lines 397–420  ·  javascript</div>
+  <div class="desc">javascript · server.js lines 405–411</div>
+  <pre>){$('explainText').textContent='Unavailable.';}
+}
+
+function renderCharts(cd){
+  if(!cd)return;
+  Object.values(chartInstances).forEach(c=&gt;c.destroy());chartInstances={};
+  $('chartsPanel').innerHTML=\`
+    &lt;div class="charts-grid"&gt;
+      &lt;div class="chart-card full"&gt;&lt;canvas id="cs"&gt;&lt;/canvas&gt;&lt;/div&gt;
+      &lt;div class="chart-card"&gt;&lt;canvas id="cl"&gt;&lt;/canvas&gt;&lt;/div&gt;
+      &lt;div class="chart-card"&gt;&lt;canvas id="cr"&gt;&lt;/canvas&gt;&lt;/div&gt;
+      &lt;div class="chart-card"&gt;&lt;canvas id="cline"&gt;&lt;/canvas&gt;&lt;/div&gt;
+      &lt;div class="chart-card"&gt;&lt;canvas id="cb"&gt;&lt;/canvas&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  \`;
+  Chart.defaults.color='#555';Chart.defaults.borderColor='#111';
+  chartInstances.s=new Chart($('cs'),cd.similarityChart);
+  chartInstances.l=new Chart($('cl'),cd.langChart);
+  chartInstances.r=new Chart($('cr'),cd.radarChart);
+  cha</pre>
+</div>
+<div class="result">
+  <div class="file">#5 src/server.js<span class="score">43.2%</span></div>
+  <div class="meta">Lines 443–464  ·  javascript</div>
+  <div class="desc">javascript · server.js lines 460–464</div>
+  <pre>form',d=&gt;\`translate(\${d.x},\${d.y})\`);
+  });
+}
+
+function esc(s){return String(s).replace(/&amp;/g,'&amp;amp;').replace(/&lt;/g,'&amp;lt;').replace(/&gt;/g,'&amp;gt;');}
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;`;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+//  SERVER
+// ═══════════════════════════════════════════════════════════════════════════════
+export function startServer(projectDir, collection, port = 3000) {
+  const app = express();
+  app.use(cors());
+  app.use(express.json({ limit: '10mb' }));
+
+  app.get('/', (_, res) =&gt; { res.setHeader('Content-Type', 'text/html'); res.send(buildDashboardHtml()); });
+
+  app.get('/api/health', (_, res) =&gt; res.json({
+    status: 'ok', version: '3.1.0', ai: !!groq, project: projectDir, ts: new Date().toISOString(),
+  }));</pre>
+</div>
+<div class="result">
+  <div class="file">#6 run.sh<span class="score">47.6%</span></div>
+  <div class="meta">Lines 31–69  ·  shell</div>
+  <div class="desc">shell · run.sh lines 31–38</div>
+  <pre>"$1" = "publish" ]; then
+  print_step "Pre-publish checks"
+
+  # Verify package.json
+  node -e "const p=JSON.parse(require('fs').readFileSync('package.json','utf-8')); \
+    console.log('  · name:',p.name); \
+    console.log('  · version:',p.version); \
+    console.log('  · bin:',JSON.stringify(p.bin));"
+
+  print_step "Dry run"
+  npm publish --dry-run
+
+  echo ""
+  read -p "  Publish to npm? (y/N) " confirm
+  if [ "$confirm" = "y" ] || [ "$confirm" = "Y" ]; then
+    print_step "Publishing"
+    npm publish --access public
+    print_ok "Published! npm i -g codeaura"
+  else
+    print_dim "Aborted."
+  fi
+  exit 0
+fi
+
+# ─── DEFAULT: install + link + smoke test ────────────────────────────────────
+print_step "CodeAura v3.1.0 — Local Test"
+
+# Check Node version
+NODE_MAJOR=$(node -e "console.log(pro</pre>
+</div>
+<div class="result">
+  <div class="file">#7 src/indexer.js<span class="score">43.2%</span></div>
+  <div class="meta">Lines 511–536  ·  javascript</div>
+  <div class="desc">javascript · indexer.js lines 530–536</div>
+  <pre>name(relPath)} lines ${child.startLine}–${child.endLine}`;
+
+    batch.ids.push(child.id);
+    batch.embeddings.push(embeddings[i]);
+    batch.documents.push(child.content);
+    batch.metadatas.push({
+      filePath:      relPath,
+      language:      lang,
+      startLine:     child.startLine,
+      endLine:       child.endLine,
+      chunkSize:     child.content.length,
+      description:   desc.slice(0, 500),
+      // Parent-doc retrieval fields
+      parentId:      child.parentId,
+      parentStart:   parent?.startLine ?? child.startLine,
+      parentEnd:     parent?.endLine   ?? child.endLine,
+      parentContent: (parent?.content ?? child.content).slice(0, 2000),
+      // Structure metadata for display
+      functions:     JSON.stringify(structure.functions.slice(0, 5)),
+      classes</pre>
+</div>
+<div class="result">
+  <div class="file">#8 package-lock.json<span class="score">43.2%</span></div>
+  <div class="meta">Lines 2236–2262  ·  json</div>
+  <div class="desc">json · package-lock.json lines 2251–2256</div>
+  <pre>"url": "https://github.com/sponsors/sindresorhus"
+      }
+    },
+    "node_modules/isomorphic-fetch": {
+      "version": "3.0.0",
+      "resolved": "https://registry.npmjs.org/isomorphic-fetch/-/isomorphic-fetch-3.0.0.tgz",
+      "integrity": "sha512-qvUtwJ3j6qwsF3jLxkZ72qCgjMysPzDfeV240JHiGZsANBYd+EEuu35v7dfrJ9Up0Ak07D7GGSkGhCHTqg/5wA==",
+      "license": "MIT",
+      "dependencies": {
+        "node-fetch": "^2.6.1",
+        "whatwg-fetch": "^3.4.1"
+      }
+    },
+    "node_modules/json-schema-traverse": {
+      "version": "1.0.0",
+      "resolved": "https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz",
+      "integrity": "sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==",
+      "license": "MIT"
+    },
+    "node_m</pre>
+</div>
+<div class="result">
+  <div class="file">#9 src/index.js<span class="score">42.5%</span></div>
+  <div class="meta">Lines 361–393  ·  javascript</div>
+  <div class="desc">javascript · index.js lines 391–393</div>
+  <pre>deaura/],
+    persistent: true, ignoreInitial: true,
+  });
+
+  const handle = async fp =&gt; {
+    const sp = spinner(`Re-indexing ${basename(fp)}`);
+    try {
+      await indexRepository(projectDir, { forceReindex: false, silent: true });
+      sp.succeed(`Re-indexed ${basename(fp)}`);
+    } catch (err) { sp.fail(err.message); }
+  };
+
+  watcher.on('change', handle);
+  watcher.on('add',    handle);
+  watcher.on('unlink', fp =&gt; info(`Removed: ${basename(fp)}`));
+
+  await new Promise(r =&gt; process.once('SIGINT', r));
+  await watcher.close();
+  info('Watcher stopped.');
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+//  DIFF MODE  — preview index changes without modifying anything
+// ════════════════════════════════════════════════════════════════════════════</pre>
+</div>
+<div class="result">
+  <div class="file">#10 src/terminal-search.js<span class="score">41.0%</span></div>
+  <div class="meta">Lines 183–209  ·  javascript</div>
+  <div class="desc">javascript · terminal-search.js lines 198–203</div>
+  <pre>.length} results`) + chalk.dim(` for "${query}"`) + '\n');
+
+  // Score overview
+  console.log(chalk.dim('  Scores'));
+  console.log(chalk.dim('  ' + '─'.repeat(62)));
+  results.slice(0, 10).forEach((r, i) =&gt; {
+    console.log(`  ${chalk.dim((`#${i + 1} ${basename(r.filePath)}`).padEnd(34))} ${scoreBar(r.similarity)}`);
+  });
+  console.log(chalk.dim('  ' + '─'.repeat(62)) + '\n');
+
+  // Cards
+  slice.forEach((r, idx) =&gt; {
+    const gi = page * pageSize + idx + 1;
+    console.log(chalk.bold.white(`  ┌─ #${gi}  ${r.filePath}`) + chalk.dim(`  [${r.language || ''}]`));
+    console.log(`  │  ${chalk.dim(`lines ${r.startLine}–${r.endLine}`)}  ${scoreBar(r.similarity)}`);
+    if (r.description) console.log(`  │  ${chalk.dim('·')} ${chalk.white(r.description)}`);
+
+    // Structure hints
+    const f</pre>
+</div>
+<script>
+Chart.defaults.color='#555';Chart.defaults.borderColor='#111';
+new Chart(document.getElementById('cs'),{"type":"bar","data":{"labels":["#1 terminal-search.js","#2 server.js","#3 terminal-search.js","#4 server.js","#5 server.js","#6 run.sh","#7 indexer.js","#8 package-lock.json","#9 index.js","#10 terminal-search.js"],"datasets":[{"label":"Similarity %","data":["66.5","54.7","63.1","52.2","43.2","47.6","43.2","43.2","42.5","41.0"],"backgroundColor":["rgba(255,255,255,0.7)","rgba(255,255,255,0.7)","rgba(255,255,255,0.7)","rgba(255,255,255,0.7)","rgba(100,100,100,0.7)","rgba(100,100,100,0.7)","rgba(100,100,100,0.7)","rgba(100,100,100,0.7)","rgba(100,100,100,0.7)","rgba(100,100,100,0.7)"],"borderRadius":3,"borderWidth":0}]},"options":{"indexAxis":"y","responsive":true,"plugins":{"legend":{"display":false},"title":{"display":true,"text":"Similarity Scores","color":"#888"}},"scales":{"x":{"min":0,"max":100,"ticks":{"color":"#555"},"grid":{"color":"#111"}},"y":{"ticks":{"color":"#555"}}}}});
+new Chart(document.getElementById('cl'),{"type":"doughnut","data":{"labels":["javascript","shell","json"],"datasets":[{"data":[8,1,1],"backgroundColor":["#00ff88","#fff","#aaa","#666","#444"],"borderColor":"#000","borderWidth":3}]},"options":{"responsive":true,"cutout":"65%","plugins":{"legend":{"labels":{"color":"#555"}},"title":{"display":true,"text":"Languages","color":"#888"}}}});
+</script>
+</body></html>

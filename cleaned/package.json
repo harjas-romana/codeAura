@@ -1,0 +1,82 @@
+{
+  "name": "code-aura",
+  "version": "3.1.0",
+  "description": "Developer velocity engine — hybrid BM25 + semantic code search with parent-doc retrieval, parallel indexing, and AI explanations.",
+  "type": "module",
+  "bin": {
+    "codeaura": "./src/index.js"
+  },
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./indexer": "./src/indexer.js",
+    "./server": "./src/server.js",
+    "./search": "./src/terminal-search.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "prepublishOnly": "node -e \"console.log('Publishing codeaura v3.1.0...')\"",
+    "test": "node src/index.js --version"
+  },
+  "keywords": [
+    "code-search",
+    "semantic-search",
+    "ai",
+    "cli",
+    "developer-tools",
+    "codebase",
+    "groq",
+    "embeddings",
+    "bm25",
+    "vector-search",
+    "code-analysis",
+    "llm",
+    "chromadb",
+    "developer-velocity"
+  ],
+  "author": {
+    "name": "Harjas Singh",
+    "email": "harjas42@icloud.com",
+    "url": "https://github.com/harjas-romana"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/harjas-romana/codeAura#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harjas-romana/codeAura.git"
+  },
+  "bugs": {
+    "url": "https://github.com/harjas-romana/codeAura/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@chroma-core/default-embed": "^0.1.9",
+    "chalk": "^5.3.0",
+    "chromadb": "^1.8.1",
+    "cli-progress": "^3.12.0",
+    "cli-table3": "^0.6.5",
+    "commander": "^12.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "figures": "^6.1.0",
+    "groq-sdk": "^0.7.0",
+    "inquirer": "^9.2.23",
+    "ora": "^8.1.0"
+  },
+  "optionalDependencies": {
+    "chokidar": "^3.6.0",
+    "fast-glob": "^3.3.3",
+    "p-limit": "^6.2.0"
+  },
+  "preferGlobal": true,
+  "files": [
+    "src/",
+    "README.md",
+    ".env.example",
+    "LICENSE"
+  ]
+}

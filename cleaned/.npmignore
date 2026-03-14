@@ -1,0 +1,41 @@
+# Development
+run.sh
+.env
+.env.local
+.env.production
+
+# Test artifacts
+test/
+tests/
+*.test.js
+*.spec.js
+__tests__/
+
+# Local index cache
+.codeaura-hashes.json
+.codeaura-v3.json
+.codeaura-chat.json
+.codeaura-api-key
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# CI
+.github/
+.gitlab-ci.yml
+
+# Logs
+*.log
+logs/
+
+# Export artifacts
+codeaura-export-*.html
+codeaura-export-*.json
+codeaura-export-*.md
